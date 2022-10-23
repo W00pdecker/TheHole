@@ -13,11 +13,16 @@
 <body>
     <%="Hello, " + Player.getName()
             + "! You are now on level "
-            + Player.getLevel() + ". This is some stuff you got:"%><br/>
+            + Player.getLevel()
+            + "You have " + Player.getHp() + " HP"%><br/><br/>
+    <%="This is some stuff you got:"%><br/>
     <% if (Player.getWeapon() != null)
-        out.println("You are wielding " + Player.getWeapon());%>
+        out.println("You are wielding " + Player.getWeapon());%><br/>
     <% if (Player.getRing() != null)
-        out.println("You are wearing " + Player.getRing());%><br/><br/>
+        out.println("You are wearing " + Player.getRing());%><br/>
+    <% if (!Player.getLoot().isEmpty())
+        out.println("Also you have " + Player.getLoot().toString());%><br/>
+    <br/><br/>
     <a href="${pageContext.session.getAttribute("level")}">Ok, got it!</a>
 </body>
 </html>

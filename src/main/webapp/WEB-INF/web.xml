@@ -24,4 +24,14 @@
     <servlet-name>NextServlet</servlet-name>
     <url-pattern>/next</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FightServlet</servlet-name>
+    <servlet-class>com.game.app.servlets.FightServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FightServlet</servlet-name>
+    <url-pattern>/fight</url-pattern>
+  </servlet-mapping>
 </web-app>

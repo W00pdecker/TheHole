@@ -1,10 +1,16 @@
 package com.game.app.entities;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
     private static Player instance;
     private static String name;
     private static String weapon;
     private static String ring;
+    private static List<String> loot = new ArrayList<>();
     private static int level = 0;
 
 
@@ -13,7 +19,7 @@ public class Player {
     private Player(String name) {
         this.name = name;
     }
-
+    @Test
     public static synchronized Player getInstance(String name) {
         if (instance == null) {
             instance = new Player(name);
@@ -24,7 +30,7 @@ public class Player {
     public static Player getInstance() {
         return instance;
     }
-
+    @Test
     public static int hit() {
         int result;
         switch (weapon) {
@@ -77,6 +83,14 @@ public class Player {
     }
     public static void setHp(int hp) {
         Player.hp = hp;
+    }
+
+    public static void addLoot(String loot) {
+        Player.loot.add(loot);
+    }
+
+    public static List<String> getLoot() {
+        return loot;
     }
 
 

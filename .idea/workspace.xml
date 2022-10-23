@@ -9,32 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98bccc6-fe5a-41f3-a795-9fe89697009a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/EnemyFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/Goblin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/UnknownEnemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/script/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/script/Script.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/FightServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/NextServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/StartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/my.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/gameover.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/level0.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/level1.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/level2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/status.jsp" afterDir="false" />
+    <list default="true" id="e98bccc6-fe5a-41f3-a795-9fe89697009a" name="Changes" comment="First commit. &#10;Three servlets">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/level2-0.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/level2-1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FightServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/NextServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StartServletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/entities/EnemyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/EnemyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/app/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/script/Level.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/script/Script.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/FightServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/FightServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/NextServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/NextServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/StartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game/app/servlets/StartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/status.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/status.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +37,8 @@
       <list>
         <option value="CSS File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,7 +81,57 @@
       <recent name="com.game.app.entities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StartServletTest.startServletDoPostPlayerIsNull">
+    <configuration name="NextServletTest.nextServletDoGetMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TextRPG1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NextServletTest" />
+      <option name="METHOD_NAME" value="nextServletDoGetMethods" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NextServletTest.nextServletException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TextRPG1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NextServletTest" />
+      <option name="METHOD_NAME" value="nextServletException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NextServletTest.nextServletExceptionDoGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TextRPG1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NextServletTest" />
+      <option name="METHOD_NAME" value="nextServletExceptionDoGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartServletTest.startServletDoPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TextRPG1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StartServletTest" />
+      <option name="METHOD_NAME" value="startServletDoPost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartServletTest.startServletDoPostPlayerIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TextRPG1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StartServletTest" />
+      <option name="METHOD_NAME" value="startServletDoPostPlayerIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.65" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.65" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -178,6 +219,23 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.NextServletTest.nextServletDoGetMethods" />
+      <item itemvalue="JUnit.NextServletTest.nextServletException" />
+      <item itemvalue="JUnit.NextServletTest.nextServletExceptionDoGet" />
+      <item itemvalue="JUnit.StartServletTest.startServletDoPost" />
+      <item itemvalue="JUnit.StartServletTest.startServletDoPostPlayerIsNull" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.65" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StartServletTest.startServletDoPostPlayerIsNull" />
+        <item itemvalue="JUnit.StartServletTest.startServletDoPost" />
+        <item itemvalue="JUnit.NextServletTest.nextServletExceptionDoGet" />
+        <item itemvalue="JUnit.NextServletTest.nextServletDoGetMethods" />
+        <item itemvalue="JUnit.NextServletTest.nextServletException" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,8 +245,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665928169086</updated>
-      <workItem from="1665928170827" duration="34170000" />
+      <workItem from="1665928170827" duration="52156000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit. &#10;Three servlets">
+      <created>1666540724688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666540724688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,5 +270,56 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit. &#10;Three servlets" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit. &#10;Three servlets" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/FightServletTest.java</url>
+          <line>25</line>
+          <properties class="FightServletTest" method="actionNullPointerException">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/FightServletTest.java</url>
+          <line>48</line>
+          <properties class="FightServletTest" method="ringTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/NextServletTest.java</url>
+          <line>19</line>
+          <properties class="NextServletTest" method="nextServletExceptionDoGet">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/StartServletTest.java</url>
+          <line>27</line>
+          <properties class="StartServletTest" method="startServletDoPostNameNull">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/StartServletTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,21 +1,29 @@
 package com.game.app.servlets;
 
 import com.game.app.entities.Player;
+import org.junit.jupiter.api.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Objects;
 
 public class NextServlet extends HttpServlet {
     @Override
+    @Test
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (Objects.isNull(req.getParameter("page"))) {
+            throw new ServletException("Something wrong");
+        }
+        HttpSession session = req.getSession();
         String nextLevel = req.getParameter("page");
-        Player player = (Player) req.getSession().getAttribute("player");
+        Player player = (Player) session.getAttribute("player");
         if (nextLevel.contains("level")) {
             updatePlayer(player, req);
-            req.getSession().setAttribute("level", nextLevel);
+            session.setAttribute("level", nextLevel);
         }
         resp.sendRedirect(nextLevel);
     }

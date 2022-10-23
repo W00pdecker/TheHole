@@ -3,7 +3,9 @@ package com.game.app.servlets;
 import com.game.app.entities.Enemy;
 import com.game.app.entities.EnemyFactory;
 import com.game.app.entities.Player;
+import org.junit.jupiter.api.Test;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,17 +14,33 @@ import java.io.IOException;
 
 public class FightServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Test
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String enemy = req.getParameter("enemy");
         String action = req.getParameter("action");
         String loot = req.getParameter("loot");
+        if (enemy == null || action == null) {
+            throw new NullPointerException("Something wrong");
+        }
+
         if (action.equals("fight")) {
             fight(EnemyFactory.getEnemy(enemy));
             if (Player.getHp() < 0) {
                 resp.sendRedirect("/gameover.jsp");
             }
-            else resp.
+            else {
+                Player.addLoot(loot);
+                req.getSession().setAttribute("level", "level2-0.jsp");
+                resp.sendRedirect("/level2-0.jsp");
+            }
+        } else if (action.equals("negotiate")) {
+            Player.setRing("RingOfNight");
+            req.getSession().setAttribute("level", "level2-1.jsp");
+            resp.sendRedirect("level2-1.jsp");
         }
+
+        else throw new ServletException("Something wrong");
 
     }
 
