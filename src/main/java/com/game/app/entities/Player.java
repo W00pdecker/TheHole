@@ -1,6 +1,5 @@
 package com.game.app.entities;
 
-import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +16,9 @@ public class Player {
     private static int hp = 100;
 
     private Player(String name) {
-        this.name = name;
+        Player.name = name;
     }
-    @Test
+
     public static synchronized Player getInstance(String name) {
         if (instance == null) {
             instance = new Player(name);
@@ -30,19 +29,14 @@ public class Player {
     public static Player getInstance() {
         return instance;
     }
-    @Test
+
     public static int hit() {
-        int result;
-        switch (weapon) {
-            case "Sword":  result = 6;
-            break;
-            case "Axe": result = 8;
-            break;
-            case "Handgun": result = 25;
-            break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + weapon);
-        }
+        int result = switch (weapon) {
+            case "Sword" -> 6;
+            case "Axe" -> 8;
+            case "Handgun" -> 25;
+            default -> throw new IllegalStateException("Unexpected value: " + weapon);
+        };
         return result;
     }
 

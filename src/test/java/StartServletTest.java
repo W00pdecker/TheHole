@@ -1,5 +1,4 @@
 import com.game.app.entities.Player;
-import com.game.app.servlets.NextServlet;
 import com.game.app.servlets.StartServlet;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
